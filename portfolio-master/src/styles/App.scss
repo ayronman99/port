@@ -1,0 +1,176 @@
+@import './fonts';
+@import './skills';
+@import './projectgallery';
+@import './contactform';
+
+* {
+    margin:0;
+    padding:0;
+	box-sizing: border-box;
+}
+
+html {    
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+	background-image: linear-gradient(62deg, #3a3d40 0%, #3b3442 100%);
+    position: relative;
+
+
+    .home, .about, .works, .contact{
+        height: 100vh;
+    }
+
+    /* NavBar Design*/
+    .navibar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        
+        ul {
+            float:right;
+            list-style-type: none;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        li {
+            padding-right: 20px;
+            display: inline-block;
+        }
+        a {
+            color: rgb(240, 229, 229);
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+        }
+        a::after{
+            content: '';
+            display: block;
+            height: 2px;
+            left: 1em;
+            right: 1em;
+            transform: scaleX(0);
+            transition: transform 150ms ease-in-out;
+            background: #fff;
+        }
+        a:hover::after,
+        a:focus::after{
+           transform: scaleX(1);
+        }
+    }
+    .navibar.activate {
+        transition: .6s;
+        background-color: rgb(86, 86, 90);
+    }
+
+    /* Home or Landing Page Design*/
+
+    .home{
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        background-image: url('./imgs/testgif.gif');
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .center-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            padding:3em;
+            border: 1.5px solid #747d8c;
+            font-family: DotGothic16, Arial, Helvetica, sans-serif;
+            background-color: rgba(22, 22, 21, 0.8);
+            line-height: 2.2rem;
+
+            h1{
+                font-size: 1.8rem;
+                color: #09e31b;
+            }
+            p{
+                color: #09e31b;
+                font-weight: 700;
+            }
+            .know-more {
+                color:#e3ab0b;
+                border-radius: 4px;
+                font-size: 0.8em;
+                background-color: #2d3436;
+                padding:0.8em;
+                margin-right: 1em;
+                font-family: DotGothic16, Arial, Helvetica, sans-serif;
+                cursor: pointer;
+                font-weight: bold;
+                outline:none;
+                transition: transform 0.1s ease-out;
+            }
+            button::after{
+                content: '';
+                position: relative;
+                width: 0.8rem;
+                height: 0.8rem;
+                border-right: .1em solid #fff;
+                border-bottom: .1em solid #fff;
+                transition: transform 0.1s ease-in-out;
+                transform: rotate(-45deg);
+                display: inline-block;
+                margin-right: .5em;
+                margin-left: .5em;
+                margin-top: .1rem;
+            }
+            button:hover::after, button:focus::after {
+                transform: rotate(45deg);
+                transition: transform .1s ease-in-out;
+                
+              }
+            .know-more:active {
+                transform: translateY(8px);
+                
+            }
+        }
+        
+    }
+
+
+    /* About me section*/
+    .about{
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        line-height: 1.7rem;
+        background-image: linear-gradient(90deg, #8c8f8f, #676969,#4e4d4e);
+        
+        h2{
+            padding-top: 2em;
+            padding-bottom: 1.8rem;
+            font-size: 34px;
+            font-weight: bold;
+        }
+    }
+
+
+    /* My works section*/
+    .works{
+
+
+        h2{
+            font-size:36px;
+            margin:0 0 30px;
+            color:#000000;
+            text-align: center;
+        }
+    }
+
+
+    /* Contacts section under _contactform.scss*/
+
+
+}
+

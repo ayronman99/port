@@ -1,0 +1,62 @@
+[
+    {
+    "class": "projitem",
+    "source": "/images/1.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+    {
+    "class": "projitem",
+    "source": "/images/2.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/3.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/4.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/5.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/6.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/7.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/8.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/9.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+  },
+  {
+    "class": "projitem",
+    "source": "/images/10.jpg",
+    "alt": "yes working but not yet",
+    "itemdesc": "imagetest bwoi"
+   }
+]
