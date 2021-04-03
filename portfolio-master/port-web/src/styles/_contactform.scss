@@ -1,0 +1,95 @@
+
+/* contact form css*/
+.contact-body{
+    height: 100%;
+    border: 2px solid cyan;
+
+
+    .contact-start{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2em;
+        border: 2px solid red;
+        height: 80%;
+
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid green;
+            min-width: 75%;
+            height: 88%;
+
+            input{
+                margin-bottom: 1.4rem;
+                border-radius: 3px;
+                padding: .65rem;
+                box-shadow: 2.5px 5px .5rem #888888;
+            }
+            textarea{
+                resize: vertical;
+                overflow: auto;
+                max-height: 270px;
+                min-height: 150px;
+                padding-bottom: 80px;
+            }
+            input::-webkit-inner-spin-button,
+            input::-webkit-outer-spin-button{
+                    -webkit-appearance:none;
+                    margin:0;
+            }
+            input[type=number]{
+                -moz-appearance: textfield;
+            }
+        }
+    }
+
+    .contact-links{
+        border: 2px solid magenta;
+        position: relative;
+        width: 100%;
+
+        .git-links{
+            display: flex;
+            justify-content: center;
+            padding: 12px 15px;
+
+            a{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin: 0 15px;
+                background-color: #fff;
+                text-align: center;
+                transition: .6s;
+                box-shadow: 0 5px 4px rgba(0, 0, 0, .5);   
+            }
+            a:hover, a:focus{
+                transform: translateY(-10px);
+            }
+            a:nth-child(1):hover, 
+            a:nth-child(1):focus{
+                background-color: #131418;
+            }
+            a:nth-child(2):hover, 
+            a:nth-child(2):focus{
+                background-color: #0077B5;
+            }
+            a:nth-child(3):hover, 
+            a:nth-child(3):focus{
+                background-color: #55acee;
+            }
+            .fab{
+                font-size: 30px;
+                line-height: 60px;
+                transition: .6s;
+                color: #000;
+            }
+            .fab:hover {
+                color: #fff;
+            }
+        }
+
+    }
+
+}

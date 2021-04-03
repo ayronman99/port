@@ -1,0 +1,120 @@
+/* project gallery css*/
+
+@keyframes show{
+    0%{
+        opacity:0;
+        transform: scale(0.9);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+
+.project-cont{
+    max-height: 85%;
+    width: 100%;
+    padding: 15px; 
+}
+
+.project-holder{
+	display: flex;
+    align-items: center;
+
+        .projitem {
+            width:25%;
+            position: relative;
+            transition: transform 0.5s ease;
+            margin:1.2rem;
+            
+            img{
+                width: 100%;
+                display: block;
+            }
+            .caption{
+                position: absolute;
+                left:0px;
+                bottom:0;
+                background-color: rgba(0,0,0,.5);
+                padding:10px;
+                width: 100%;
+                color:#ffffff;
+                text-align: center;
+            }
+        }
+
+        .projitem:hover{
+            transform: scale(1.2);
+            z-index: 2;
+        }
+    
+    }
+    
+   
+
+
+    // ALL ABOUT PAGE BUTTONS AND WHATNOT
+    .pagination{
+        position: absolute;
+        width: 100%;
+        padding-top: 13px;
+        padding-bottom: 0;
+        text-align: center;
+        list-style-type: none;
+        
+
+        li{
+            padding:0.89rem;
+            display:inline-block
+        }
+        a{
+            cursor: pointer;
+            outline: none;
+        }
+        .previous{
+            background-image: url('./imgs/backicon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 1.1em;
+            outline: none; 
+            a{
+                display:inline-block;
+                height:15px; 
+                width:15px; 
+            }
+        }
+        .next{
+            background-image: url('./imgs/nexticon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-right: .99em;
+            outline: none;
+            a{
+                display:inline-block;
+                height:15px; 
+                width:15px; 
+            }
+
+        }
+        .previous:active{
+            transform: scale(0.9);
+        } 
+        .next:active{
+            transform: scale(0.9);
+        } 
+
+        .activepage{
+            padding: 0.5rem;
+            border: 1px solid cyan;
+            border-radius: 2px;
+            background-color: cyan;
+            animation: show .5s ease;
+        } 
+        .disabled{
+            border-color: gray;
+            color:gray;
+            pointer-events: none;
+        }
+    }
+
