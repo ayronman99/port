@@ -3,7 +3,7 @@
         transform: rotate(0deg); 
     }
     50%{
-        width: 15%;
+        width: 11.5%;
     }
     100%{
         transform: rotate(360deg); 
@@ -14,12 +14,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 2.4rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 
     .skill-container{
         width: 10%;
         position: relative;
-        margin: 0 2em;
+        margin: 0 1.5em;
         img{
             display: block;
             width: 100%;
@@ -50,4 +51,25 @@
         font-family: DotGothic16;
         font-weight: bold;
      }
+}
+
+/*css for the certificates carousel*/
+.slide-holder{
+    padding: 0 20px;
+    margin-top: 10px;
+    height:auto;
+
+    .slider{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background: #c2e2de;
+        border-radius: 15px;
+        margin-top: 10px;
+        
+        .slide img{
+            width: 500px;
+            height: 300px;
+        }
+    }
 }

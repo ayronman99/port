@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import './styles/App.css';
 import SkillSet from './components/SkillSet';
-// import ProjectWorks from './components/ProjectWorks';
 import ProjectWorks from './components/ProjectWorks';
 import Contact from './components/Contact';
+import Slider from './components/CertCarousel';
 
 function App(){
 
@@ -54,15 +54,16 @@ function App(){
 
       <div ref={aboutRef} className='about' id='about'>
         <h2> About me </h2>
-        <p>I'm a self-taught front-end developer and an aspiring fullstack developer.<br />I can help you in creating your website. Where you can show the<br /> world your works or to attract prospect and potential clients.</p>
+          <p>I'm a self-taught front-end developer and an aspiring fullstack developer.<br />I can help you in creating your dream website. Whether you're looking to attract prospect<br /> and potential clients or just show the world your masterpiece.</p>
 
-        <strong>Here are the list of skills, I have to help you in achieving your goals:
-        </strong>
-        <div className='skeel'>
-          <SkillSet />
-        </div>
+            <strong>Here are the list of skills, I have to help you in achieving your goals:
+            </strong>
+            
+          <div className='skeel'>
+            <SkillSet />
+          </div>
 
-
+         <Slider />
         
       </div>
 

@@ -2,6 +2,7 @@
 @import './skills';
 @import './projectgallery';
 @import './contactform';
+@import './certcarou';
 
 * {
     margin:0;
@@ -29,12 +30,14 @@ html {
         top: 0;
         width: 100%;
         z-index: 999;
+        transition: .6s;
         
         ul {
             float:right;
             list-style-type: none;
             padding: 5px;
             font-weight: bold;
+            transition: .6s;
             font-size: 1.5rem;
             font-family: 'Poppins', sans-serif;
         }
@@ -66,6 +69,11 @@ html {
     .navibar.activate {
         transition: .6s;
         background-color: rgb(86, 86, 90);
+
+        ul{
+            transition: .6s;
+            font-size: 1.2rem;
+        }
     }
 
     /* Home or Landing Page Design*/
@@ -144,11 +152,11 @@ html {
     .about{
         text-align: center;
         font-family: 'Nunito', sans-serif;
-        line-height: 1.7rem;
-        background-image: linear-gradient(90deg, #8c8f8f, #676969,#4e4d4e);
+        line-height: 1.3rem;
+        background-color:rgb(243, 234, 234);
         
         h2{
-            padding-top: 2em;
+            padding-top: 1.7em;
             padding-bottom: 1.8rem;
             font-size: 34px;
             font-weight: bold;

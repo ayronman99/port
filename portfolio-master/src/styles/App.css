@@ -9,7 +9,7 @@
             transform: rotate(0deg);
   }
   50% {
-    width: 15%;
+    width: 11.5%;
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -22,7 +22,7 @@
             transform: rotate(0deg);
   }
   50% {
-    width: 15%;
+    width: 11.5%;
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -40,13 +40,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2.4rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .skill-holder .skill-container {
   width: 10%;
   position: relative;
-  margin: 0 2em;
+  margin: 0 1.5em;
 }
 
 .skill-holder .skill-container img {
@@ -83,6 +84,33 @@
           animation: spinner 1s;
   font-family: DotGothic16;
   font-weight: bold;
+}
+
+/*css for the certificates carousel*/
+.slide-holder {
+  padding: 0 20px;
+  margin-top: 10px;
+  height: auto;
+}
+
+.slide-holder .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #c2e2de;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.slide-holder .slider .slide img {
+  width: 500px;
+  height: 300px;
 }
 
 /* project gallery css*/
@@ -382,6 +410,8 @@ html {
   top: 0;
   width: 100%;
   z-index: 999;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .container .navibar ul {
@@ -389,6 +419,8 @@ html {
   list-style-type: none;
   padding: 5px;
   font-weight: bold;
+  -webkit-transition: .6s;
+  transition: .6s;
   font-size: 1.5rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -430,6 +462,12 @@ html {
   -webkit-transition: .6s;
   transition: .6s;
   background-color: #56565a;
+}
+
+.container .navibar.activate ul {
+  -webkit-transition: .6s;
+  transition: .6s;
+  font-size: 1.2rem;
 }
 
 .container .home {
@@ -533,13 +571,12 @@ html {
 .container .about {
   text-align: center;
   font-family: 'Nunito', sans-serif;
-  line-height: 1.7rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#8c8f8f), color-stop(#676969), to(#4e4d4e));
-  background-image: linear-gradient(90deg, #8c8f8f, #676969, #4e4d4e);
+  line-height: 1.3rem;
+  background-color: #f3eaea;
 }
 
 .container .about h2 {
-  padding-top: 2em;
+  padding-top: 1.7em;
   padding-bottom: 1.8rem;
   font-size: 34px;
   font-weight: bold;
