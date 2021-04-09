@@ -20,7 +20,7 @@ html {
     position: relative;
 
 
-    .home, .about, .works, .contact{
+    .home, .about{
         height: 100vh;
     }
 
@@ -46,7 +46,7 @@ html {
             display: inline-block;
         }
         a {
-            color: rgb(240, 229, 229);
+            color: #000000;
             text-decoration: none;
             display: inline-block;
             outline: none;
@@ -80,35 +80,30 @@ html {
 
     .home{
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center; 
-        background-image: url('./imgs/testgif.gif');
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-color: rgb(226, 216, 216);
+        background-color: #fff;
 
         .center-info{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 3px;
-            padding:3em;
-            border: 1.5px solid #747d8c;
             font-family: DotGothic16, Arial, Helvetica, sans-serif;
-            background-color: rgba(22, 22, 21, 0.8);
-            line-height: 2.2rem;
+            width: 50%;
+            padding:0.8em;
+            
 
             h1{
-                font-size: 1.8rem;
-                color: #09e31b;
+                font-family: 'Metrophobic', sans-serif;;
+                font-size: 2rem;
+                color: #363d47;
+                padding-bottom: 0.7rem;
             }
             p{
-                color: #09e31b;
-                font-weight: 700;
+                color: #363d47;
+                font-weight:  400;
+                line-height: 1.5;
             }
             .know-more {
-                color:#e3ab0b;
+                color:#fff;
                 border-radius: 4px;
                 font-size: 0.8em;
                 background-color: #2d3436;
@@ -142,6 +137,16 @@ html {
             .know-more:active {
                 transform: translateY(8px);
                 
+            }
+        }
+
+        .coderhandler{
+            width: 50%;
+            display:flex;
+            justify-content: center;
+            img{
+                padding-right: 2rem;
+                width:70%;
             }
         }
         

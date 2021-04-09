@@ -1,35 +1,15 @@
+/* font-family: 'Poppins', sans-serif; */
 @import url(https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap);
+/* font-family: 'Raleway', sans-serif; */
 @import url(https://fonts.googleapis.com/css?family=Raleway:700&display=swap);
+/* font-family: 'DotGothic16', sans-serif; */
 @import url(https://fonts.googleapis.com/css2?family=DotGothic16&display=swap);
+/* font-family: 'Nunito', sans-serif; */
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap);
+/* font-family: 'Ballet', cursive; */
 @import url(https://fonts.googleapis.com/css2?family=Ballet&family=Oi&display=swap);
-@-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    width: 11.5%;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    width: 11.5%;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
+/* font-family: 'Metrophobic', sans-serif; */
+@import url(https://fonts.googleapis.com/css2?family=Metrophobic&display=swap);
 .skill-holder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +28,10 @@
   width: 10%;
   position: relative;
   margin: 0 1.5em;
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
 }
 
 .skill-holder .skill-container img {
@@ -80,8 +64,8 @@
 }
 
 .skill-holder .skill-container:hover {
-  -webkit-animation: spinner 1s;
-          animation: spinner 1s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   font-family: DotGothic16;
   font-weight: bold;
 }
@@ -114,31 +98,6 @@
 }
 
 /* project gallery css*/
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .project-cont {
   max-height: 85%;
   width: 100%;
@@ -401,7 +360,7 @@ html {
   /* Contacts section under _contactform.scss*/
 }
 
-.container .home, .container .about, .container .works, .container .contact {
+.container .home, .container .about {
   height: 100vh;
 }
 
@@ -431,7 +390,7 @@ html {
 }
 
 .container .navibar a {
-  color: #f0e5e5;
+  color: #000000;
   text-decoration: none;
   display: inline-block;
   outline: none;
@@ -474,52 +433,35 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("./imgs/testgif.gif");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #fff;
 }
 
 .container .home .center-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 3px;
-  padding: 3em;
-  border: 1.5px solid #747d8c;
   font-family: DotGothic16, Arial, Helvetica, sans-serif;
-  background-color: rgba(22, 22, 21, 0.8);
-  line-height: 2.2rem;
+  width: 50%;
+  padding: 0.8em;
 }
 
 .container .home .center-info h1 {
-  font-size: 1.8rem;
-  color: #09e31b;
+  font-family: 'Metrophobic', sans-serif;
+  font-size: 2rem;
+  color: #363d47;
+  padding-bottom: 0.7rem;
 }
 
 .container .home .center-info p {
-  color: #09e31b;
-  font-weight: 700;
+  color: #363d47;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .container .home .center-info .know-more {
-  color: #e3ab0b;
+  color: #fff;
   border-radius: 4px;
   font-size: 0.8em;
   background-color: #2d3436;
@@ -566,6 +508,21 @@ html {
 .container .home .center-info .know-more:active {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
+}
+
+.container .home .coderhandler {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .home .coderhandler img {
+  padding-right: 2rem;
+  width: 70%;
 }
 
 .container .about {

@@ -1,14 +1,4 @@
-@keyframes spinner {
-    0%{
-        transform: rotate(0deg); 
-    }
-    50%{
-        width: 11.5%;
-    }
-    100%{
-        transform: rotate(360deg); 
-    }
-}
+
 
 .skill-holder{
     display: flex;
@@ -16,11 +6,14 @@
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    
 
     .skill-container{
         width: 10%;
         position: relative;
         margin: 0 1.5em;
+        transition: transform .6s ease;
+        
         img{
             display: block;
             width: 100%;
@@ -47,7 +40,7 @@
         }
     }
     .skill-container:hover{
-        animation: spinner 1s;
+        transform: scale(1.2);
         font-family: DotGothic16;
         font-weight: bold;
      }

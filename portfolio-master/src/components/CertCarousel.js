@@ -9,7 +9,7 @@ const Slider = () => {
         <div className='slide-holder'>
             <h3>Here are my certificates I acquired from <a href='https://www.freecodecamp.org/' 
             target='_blank'
-            rel='FreeCodeCamp'
+            rel="noreferrer"
             >FreeCodeCamp</a></h3>
             <div className='slider'>
                 <Carousel>
