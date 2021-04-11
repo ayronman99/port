@@ -6,45 +6,45 @@
     max-height: 85%;
     width: 100%;
     padding: 15px; 
+
+    .project-holder{
+        display: flex;
+        align-items: center;
+    
+            .projitem {
+                width:25%;
+                position: relative;
+                transition: transform 0.5s ease;
+                margin:1.2rem;
+                
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                .caption{
+                    position: absolute;
+                    left:0px;
+                    bottom:0;
+                    background-color: rgba(0,0,0,.5);
+                    padding:10px;
+                    width: 100%;
+                    color:#ffffff;
+                    text-align: center;
+                }
+    
+                &:hover{
+                    transform: scale(1.2);
+                    z-index: 2;
+                }
+            }
+        }
 }
 
-.project-holder{
-	display: flex;
-    align-items: center;
 
-        .projitem {
-            width:25%;
-            position: relative;
-            transition: transform 0.5s ease;
-            margin:1.2rem;
-            
-            img{
-                width: 100%;
-                display: block;
-            }
-            .caption{
-                position: absolute;
-                left:0px;
-                bottom:0;
-                background-color: rgba(0,0,0,.5);
-                padding:10px;
-                width: 100%;
-                color:#ffffff;
-                text-align: center;
-            }
-        }
-
-        .projitem:hover{
-            transform: scale(1.2);
-            z-index: 2;
-        }
-    
-    }
-    
    
 
 
-    // ALL ABOUT PAGE BUTTONS AND WHATNOT
+    // ALL ABOUT PAGE BUTTONS
     .pagination{
         position: absolute;
         width: 100%;
@@ -73,6 +73,10 @@
                 height:15px; 
                 width:15px; 
             }
+
+            &:active{
+                transform: scale(0.9);
+            } 
         }
         .next{
             background-image: url('./imgs/nexticon.png');
@@ -86,13 +90,13 @@
                 width:15px; 
             }
 
+            &:active{
+                transform: scale(0.9);
+            } 
+
         }
-        .previous:active{
-            transform: scale(0.9);
-        } 
-        .next:active{
-            transform: scale(0.9);
-        } 
+        
+        
 
         .activepage{
             padding: 0.5rem;

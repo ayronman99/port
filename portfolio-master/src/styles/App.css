@@ -34,6 +34,13 @@
   transition: transform .6s ease, -webkit-transform .6s ease;
 }
 
+.skill-holder .skill-container:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  font-family: DotGothic16;
+  font-weight: bold;
+}
+
 .skill-holder .skill-container img {
   display: block;
   width: 100%;
@@ -63,13 +70,6 @@
   position: relative;
 }
 
-.skill-holder .skill-container:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  font-family: DotGothic16;
-  font-weight: bold;
-}
-
 /*css for the certificates carousel*/
 .slide-holder {
   padding: 0 20px;
@@ -87,14 +87,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #c2e2de;
   border-radius: 15px;
   margin-top: 10px;
 }
 
 .slide-holder .slider .slide img {
-  width: 500px;
-  height: 300px;
+  width: 60%;
+  height: 100%;
 }
 
 /* project gallery css*/
@@ -104,7 +103,7 @@
   padding: 15px;
 }
 
-.project-holder {
+.project-cont .project-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,7 +112,7 @@
           align-items: center;
 }
 
-.project-holder .projitem {
+.project-cont .project-holder .projitem {
   width: 25%;
   position: relative;
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -123,12 +122,12 @@
   margin: 1.2rem;
 }
 
-.project-holder .projitem img {
+.project-cont .project-holder .projitem img {
   width: 100%;
   display: block;
 }
 
-.project-holder .projitem .caption {
+.project-cont .project-holder .projitem .caption {
   position: absolute;
   left: 0px;
   bottom: 0;
@@ -139,7 +138,7 @@
   text-align: center;
 }
 
-.project-holder .projitem:hover {
+.project-cont .project-holder .projitem:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   z-index: 2;
@@ -178,6 +177,11 @@
   width: 15px;
 }
 
+.pagination .previous:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .pagination .next {
   background-image: url("./imgs/nexticon.png");
   background-size: cover;
@@ -190,11 +194,6 @@
   display: inline-block;
   height: 15px;
   width: 15px;
-}
-
-.pagination .previous:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 
 .pagination .next:active {
@@ -355,13 +354,9 @@ html {
   position: relative;
   /* NavBar Design*/
   /* Home or Landing Page Design*/
-  /* About me section*/
+  /* Skills me section*/
   /* My works section*/
   /* Contacts section under _contactform.scss*/
-}
-
-.container .home, .container .about {
-  height: 100vh;
 }
 
 .container .navibar {
@@ -390,7 +385,7 @@ html {
 }
 
 .container .navibar a {
-  color: #000000;
+  color: #3e4092;
   text-decoration: none;
   display: inline-block;
   outline: none;
@@ -408,11 +403,10 @@ html {
   transition: -webkit-transform 150ms ease-in-out;
   transition: transform 150ms ease-in-out;
   transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-  background: #fff;
+  background: #754d4d;
 }
 
-.container .navibar a:hover::after,
-.container .navibar a:focus::after {
+.container .navibar a:hover::after, .container .navibar a:focus::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -420,13 +414,33 @@ html {
 .container .navibar.activate {
   -webkit-transition: .6s;
   transition: .6s;
-  background-color: #56565a;
+  background-color: #b9b9c7;
 }
 
 .container .navibar.activate ul {
   -webkit-transition: .6s;
   transition: .6s;
   font-size: 1.2rem;
+}
+
+.container .navibar.activate a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  left: 1em;
+  right: 1em;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  background: #fff;
+}
+
+.container .navibar.activate a:hover::after, .container .navibar.activate a:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .container .home {
@@ -438,11 +452,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
   background-color: #fff;
 }
 
 .container .home .center-info {
-  font-family: DotGothic16, Arial, Helvetica, sans-serif;
+  font-family: 'Metrophobic', Arial, Helvetica, sans-serif;
   width: 50%;
   padding: 0.8em;
 }
@@ -466,7 +481,7 @@ html {
   font-size: 0.8em;
   background-color: #2d3436;
   padding: 0.8em;
-  margin-right: 1em;
+  margin-top: 1em;
   font-family: DotGothic16, Arial, Helvetica, sans-serif;
   cursor: pointer;
   font-weight: bold;
@@ -521,22 +536,35 @@ html {
 }
 
 .container .home .coderhandler img {
+  display: block;
   padding-right: 2rem;
-  width: 70%;
+  width: 100%;
 }
 
-.container .about {
+.container .skills {
   text-align: center;
   font-family: 'Nunito', sans-serif;
   line-height: 1.3rem;
   background-color: #f3eaea;
+  background-image: url(../skills/codereview.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.container .about h2 {
+.container .skills h2 {
   padding-top: 1.7em;
   padding-bottom: 1.8rem;
   font-size: 34px;
   font-weight: bold;
+}
+
+.container .skills p {
+  font-weight: 400;
+}
+
+.container .works {
+  height: 700px;
+  border: 2px solid green;
 }
 
 .container .works h2 {

@@ -13,6 +13,12 @@
         position: relative;
         margin: 0 1.5em;
         transition: transform .6s ease;
+
+        &:hover{
+            transform: scale(1.2);
+            font-family: DotGothic16;
+            font-weight: bold;
+         }
         
         img{
             display: block;
@@ -38,12 +44,9 @@
             height: 2px;
             position:relative;
         }
+        
     }
-    .skill-container:hover{
-        transform: scale(1.2);
-        font-family: DotGothic16;
-        font-weight: bold;
-     }
+    
 }
 
 /*css for the certificates carousel*/
@@ -56,13 +59,12 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        background: #c2e2de;
         border-radius: 15px;
         margin-top: 10px;
         
         .slide img{
-            width: 500px;
-            height: 300px;
+            width: 60%;
+            height: 100%;
         }
     }
 }

@@ -4,6 +4,7 @@ import jsalgs from '../FccCert/JSALGNDS.jpg';
 import fel from '../FccCert/FEL.jpg';
 
 
+
 const Slider = () => {
     return(
         <div className='slide-holder'>
@@ -14,6 +15,7 @@ const Slider = () => {
             <div className='slider'>
                 <Carousel>
                      <ImgHolder 
+                        fcert={'https://www.freecodecamp.org/certification/fcc723415ed-e832-403f-838b-e58b11ace1ea/front-end-libraries'}
                             klas={'slide three'}
                             sors={fel}
                             alt={'Front End Libs Cert'}
@@ -21,12 +23,14 @@ const Slider = () => {
                         
 
                         <ImgHolder 
+                            fcert={'https://www.freecodecamp.org/certification/fcc723415ed-e832-403f-838b-e58b11ace1ea/javascript-algorithms-and-data-structures'}
                             klas={'slide'}
                             sors={jsalgs}
                             alt={'Javascript Algo and Data Structure Cert'}
                         />
                         
                         <ImgHolder 
+                            fcert={'https://www.freecodecamp.org/certification/fcc723415ed-e832-403f-838b-e58b11ace1ea/responsive-web-design'}
                             klas={'slide'}
                             sors={rwd}
                             alt={'Responsive Web Design Cert'}
@@ -38,10 +42,14 @@ const Slider = () => {
     )
 }
 
-function ImgHolder({klas, sors, alt}){
+function ImgHolder({klas, sors, alt, fcert}){
     return(
         <div className={klas}>
-            <img src={sors} alt={alt}></img>
+            <a href={fcert} 
+            target='_blank' 
+            rel='noreferrer'>
+                <img src={sors} alt={alt}></img>
+            </a>
         </div>
     )
 }

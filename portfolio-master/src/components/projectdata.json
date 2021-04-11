@@ -1,62 +1,24 @@
+
 [
     {
+    "linksrc": "https://ayronman99.github.io/Random-Qoute-Generator/",
     "class": "projitem",
-    "source": "/images/1.jpg",
+    "source": "../Snippets/RQG.JPG",
     "alt": "yes working but not yet",
     "itemdesc": "imagetest bwoi"
   },
     {
+    "linksrc": "https://ayronman99.github.io/Markdown-Previewer/",
     "class": "projitem",
-    "source": "/images/2.jpg",
+    "source": "../Snippets/MDP.jpg",
     "alt": "yes working but not yet",
     "itemdesc": "imagetest bwoi"
   },
-  {
+  { 
+    "linksrc": "https://ayronman99.github.io/Drum-Pad-Machine/",
     "class": "projitem",
-    "source": "/images/3.jpg",
+    "source": "../Snippets/DPM.jpg",
     "alt": "yes working but not yet",
     "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/4.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/5.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/6.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/7.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/8.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/9.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-  },
-  {
-    "class": "projitem",
-    "source": "/images/10.jpg",
-    "alt": "yes working but not yet",
-    "itemdesc": "imagetest bwoi"
-   }
+  }
 ]

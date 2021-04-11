@@ -20,10 +20,6 @@ html {
     position: relative;
 
 
-    .home, .about{
-        height: 100vh;
-    }
-
     /* NavBar Design*/
     .navibar {
         position: fixed;
@@ -46,33 +42,54 @@ html {
             display: inline-block;
         }
         a {
-            color: #000000;
+            color: #3e4092;
             text-decoration: none;
             display: inline-block;
             outline: none;
-        }
-        a::after{
-            content: '';
-            display: block;
-            height: 2px;
-            left: 1em;
-            right: 1em;
-            transform: scaleX(0);
-            transition: transform 150ms ease-in-out;
-            background: #fff;
-        }
-        a:hover::after,
-        a:focus::after{
+
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                left: 1em;
+                right: 1em;
+                transform: scaleX(0);
+                transition: transform 150ms ease-in-out;
+                background: rgb(117, 77, 77);
+            }
+
+            &:hover::after,
+            &:focus::after{
            transform: scaleX(1);
-        }
+            }
+        }     
     }
     .navibar.activate {
         transition: .6s;
-        background-color: rgb(86, 86, 90);
+        background-color: rgb(185, 185, 199);
 
         ul{
             transition: .6s;
             font-size: 1.2rem;
+        }
+
+        a {
+
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                left: 1em;
+                right: 1em;
+                transform: scaleX(0);
+                transition: transform 150ms ease-in-out;
+                background: #fff;
+            }
+            
+            &:hover::after,
+            &:focus::after{
+           transform: scaleX(1);
+            }
         }
     }
 
@@ -82,11 +99,12 @@ html {
         display:flex;
         justify-content: space-around;
         align-items: center; 
+        height: 100vh;
         // background-color: rgb(226, 216, 216);
         background-color: #fff;
 
         .center-info{
-            font-family: DotGothic16, Arial, Helvetica, sans-serif;
+            font-family: 'Metrophobic', Arial, Helvetica, sans-serif;
             width: 50%;
             padding:0.8em;
             
@@ -102,20 +120,24 @@ html {
                 font-weight:  400;
                 line-height: 1.5;
             }
+
             .know-more {
                 color:#fff;
                 border-radius: 4px;
                 font-size: 0.8em;
                 background-color: #2d3436;
                 padding:0.8em;
-                margin-right: 1em;
+                margin-top: 1em;
                 font-family: DotGothic16, Arial, Helvetica, sans-serif;
                 cursor: pointer;
                 font-weight: bold;
                 outline:none;
                 transition: transform 0.1s ease-out;
             }
-            button::after{
+
+            button{ 
+                
+                &::after{
                 content: '';
                 position: relative;
                 width: 0.8rem;
@@ -128,12 +150,12 @@ html {
                 margin-right: .5em;
                 margin-left: .5em;
                 margin-top: .1rem;
-            }
-            button:hover::after, button:focus::after {
-                transform: rotate(45deg);
-                transition: transform .1s ease-in-out;
-                
-              }
+                }
+                &:hover::after, &:focus::after {
+                    transform: rotate(45deg);
+                    transition: transform .1s ease-in-out;
+                }
+             }
             .know-more:active {
                 transform: translateY(8px);
                 
@@ -145,20 +167,24 @@ html {
             display:flex;
             justify-content: center;
             img{
+                display:block;
                 padding-right: 2rem;
-                width:70%;
+                width:100%;
             }
         }
         
     }
 
 
-    /* About me section*/
-    .about{
+    /* Skills me section*/
+    .skills{
         text-align: center;
         font-family: 'Nunito', sans-serif;
         line-height: 1.3rem;
         background-color:rgb(243, 234, 234);
+        background-image: url(../skills/codereview.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
         
         h2{
             padding-top: 1.7em;
@@ -166,13 +192,16 @@ html {
             font-size: 34px;
             font-weight: bold;
         }
+        p{
+            font-weight: 400;
+        }
     }
 
 
     /* My works section*/
     .works{
-
-
+        height: 700px;
+        border: 2px solid green;
         h2{
             font-size:36px;
             margin:0 0 30px;
